@@ -1,0 +1,13 @@
+{
+	"name": "reactor-color",
+	"version": "0.1.0",
+	"title": "Reactor color",
+	"author": "muink",
+	"homepage": "https://mods.factorio.com/mod/reactor-color",
+	"description": "Reactor color.",
+	"factorio_version": "0.17",
+	"dependencies": [
+		"base >= 0.17.0",
+		"? RealisticReactorGlow"
+	]
+}

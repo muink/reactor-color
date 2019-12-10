@@ -1,0 +1,65 @@
+
+
+--uranium-235 uranium-238
+data.raw.item["uranium-235"].subgroup = "nuclear-product"
+data.raw.item["uranium-238"].subgroup = "nuclear-product"
+data.raw.item["uranium-235"].order = "a[material]-a[uranium]-a[235]"
+data.raw.item["uranium-238"].order = "a[material]-a[uranium]-b[238]"
+
+
+--Nuclear fuel cell
+data.raw.item["uranium-fuel-cell"].subgroup = "nuclear-fuel"
+data.raw.item["uranium-fuel-cell"].order = "a[uranium-fuel-cell]"
+
+
+--Used up nuclear fuel cell
+data.raw.item["used-up-uranium-fuel-cell"].subgroup = "nuclear-fuel"
+data.raw.item["used-up-uranium-fuel-cell"].order = "a[used-up-uranium-fuel-cell]"
+
+
+data:extend({
+	{
+		type = "item",
+		name = "mox-fuel-cell",
+		icon = "__Reactor__/graphics/icons/mox-fuel-cell.png",
+		icon_size = 32,
+		subgroup = "nuclear-fuel",
+		order = "b[mox-fuel-cell]",
+		fuel_category = "nuclear",
+		burnt_result = "used-up-mox-fuel-cell",
+		fuel_value = "2GJ",
+		fuel_glow_color = {r = 1.0, g = 0.9, b = 0.0},
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "used-up-mox-fuel-cell",
+		icon = "__Reactor__/graphics/icons/used-up-mox-fuel-cell.png",
+		icon_size = 32,
+		subgroup = "nuclear-fuel",
+		order = "b[used-up-mox-fuel-cell]",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "breeder-fuel-cell",
+		icon = "__Reactor__/graphics/icons/breeder-fuel-cell.png",
+		icon_size = 32,
+		subgroup = "nuclear-fuel",
+		order = "c[breeder-fuel-cell]",
+		fuel_category = "nuclear",
+		burnt_result = "used-up-breeder-fuel-cell",
+		fuel_value = "2.5GJ",
+		fuel_glow_color = {r = 1.0, g = 0.5, b = 0.0},
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "used-up-breeder-fuel-cell",
+		icon = "__Reactor__/graphics/icons/used-up-breeder-fuel-cell.png",
+		icon_size = 32,
+		subgroup = "nuclear-fuel",
+		order = "c[used-up-breeder-fuel-cell]",
+		stack_size = 50
+	}
+})
